@@ -3,37 +3,54 @@
 const container = document.querySelector(".container");
 
 
-for (let i = 1; i <= 98; i++){
-    // container.innerHTML += i; 
+for (let i = 1; i <= 100; i++){
+
+    const element = document.createElement ("div");
+    console.log(element);
+    container.append(element);
+    element.classList.add("box");
+    
+
+    // appendo i miei nuovi div, al container principale
+
+    
+
+    // stampiamo diversamente per i numeri divisibili per 3,5 ed entrambi
 
     if (i % 3 == 0 && i % 5 == 0) {
-        let i = "fizzbuzz";
+        let i = "FizzBuzz";
         console.log(i);
-        container.innerHTML += i;
+        element.innerHTML += i;
+        element.classList.add("red");
+        
     }
 
     else if (i % 5 == 0) {
-        let i = "buzz"
+        let i = "Buzz"
         console.log(i);
-        container.innerHTML += i;
+        element.innerHTML += i;
+        element.classList.add("yellow");
     }
 
     else if (i % 3 == 0) {
-        let i = "fizz"
+        let i = "Fizz"
         console.log(i);
-        container.innerHTML += i;
+        element.innerHTML += i;
+        element.classList.add("green");
     }
 
     else {
         console.log(i);
-        container.innerHTML += i;
+        element.innerHTML += i;
+        element.classList.add("blue");
     }
 
+    
 
 
 }
 
-// stampiamo diversamente per i numeri divisibili per 3,5 ed entrambi
+
 
 // creiamo un div container nel dom
 
